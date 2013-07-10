@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH.push File.expand_path("../lib", File.dirname(__FILE__))
+require 'git_mirror'
+
+instance = GitMirror.new
+
+update_all = ARGV == ['update']
+
+if update_all
+  instance.update_all
+else
+  instance.update(ARGV[0])
+end
