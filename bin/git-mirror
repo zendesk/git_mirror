@@ -3,12 +3,32 @@
 $LOAD_PATH.push File.expand_path("../lib", File.dirname(__FILE__))
 require 'git_mirror'
 
-instance = GitMirror.new
+require "thor"
 
-update_all = ARGV == ['update']
+class GitMirrorCLI < Thor
+  desc 'mirror REPOSITORY_URL', 'create a mirror of the repository at REPOSITORY_URL'
+  def mirror(repo_url)
+    instance.update(repo_url)
+  end
 
-if update_all
-  instance.update_all
+  desc 'update', 'update all local mirrors'
+  def update
+    instance.update_all
+  end
+
+  default_command :mirror
+
+  private
+
+  def instance
+    @instance ||= GitMirror.new
+  end
+end
+
+if ARGV == ['update']
+  GitMirrorCLI.start(ARGV)
+elsif ARGV == []
+  GitMirrorCLI.new.help
 else
-  instance.update(ARGV[0])
+  GitMirrorCLI.new.mirror(ARGV[0])
 end
