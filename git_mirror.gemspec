@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = 'git_mirror'
-  spec.version       = '0.2'
+  spec.version       = '0.3'
   spec.authors       = 'Mick Staugaard'
   spec.email         = 'mick@zendesk.com'
   spec.description   = 'utility for mirroring github repositories'
