@@ -2,7 +2,7 @@ require 'pathname'
 
 class GitMirror
   def initialize
-    @root = Pathname.new(ENV['GIT_MIRROR_ROOT'] || '/var/git-mirror')
+    @root = Pathname.new(ENV['GIT_MIRROR_ROOT'] || '/var/git_mirror')
   end
 
   def prepare_root
