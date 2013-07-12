@@ -10,6 +10,7 @@ Gem::Specification.new do |spec|
   spec.description   = 'utility for mirroring github repositories'
   spec.summary       = 'utility for mirroring github repositories'
   spec.homepage      = ''
+  spec.license       = "Apache License Version 2.0"
 
   spec.files         = Dir.glob('{lib,test,bin}/**/*') + ['README.md', 'bin/git-mirror']
   spec.test_files    = Dir.glob('test/**/*')
