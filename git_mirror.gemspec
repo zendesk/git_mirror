@@ -4,13 +4,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = 'git_mirror'
-  spec.version       = '0.3'
+  spec.version       = '0.4'
   spec.authors       = 'Mick Staugaard'
   spec.email         = 'mick@zendesk.com'
   spec.description   = 'utility for mirroring github repositories'
   spec.summary       = 'utility for mirroring github repositories'
   spec.homepage      = ''
-  spec.license       = "Apache License Version 2.0"
+  spec.license       = 'Apache License Version 2.0'
 
   spec.files         = Dir.glob('{lib,test,bin}/**/*') + ['README.md', 'bin/git-mirror']
   spec.test_files    = Dir.glob('test/**/*')
