@@ -39,6 +39,7 @@ class GitMirror
   def update_local(path)
     FileUtils.cd(path) do
       execute "git fetch --prune --quiet"
+      execute "git fetch --tags --quiet"
     end
   end
 
