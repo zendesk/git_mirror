@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = 'mick@zendesk.com'
   spec.description   = 'utility for mirroring github repositories'
   spec.summary       = 'utility for mirroring github repositories'
-  spec.homepage      = ''
+  spec.homepage      = 'https://github.com/zendesk/git_mirror'
   spec.license       = 'Apache License Version 2.0'
 
   spec.files         = Dir.glob('{lib,test,bin}/**/*') + ['README.md', 'bin/git-mirror']
